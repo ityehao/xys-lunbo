@@ -1,0 +1,111 @@
+
+/*
+  这里less
+*/
+//这个// 的注释在less 里面是可以写的
+
+/*我在这里可以导入var.less 文件
+import 导入
+*/
+@import "var";
+
+a{
+     color:@mainColor;
+}
+.box{
+     background: @mainColor;
+     width: 200px;
+     height: 200px;
+     border: 1px solid #ccc;
+}
+/*
+    混入是指在一个 CLASS 中引入另外一个已经定义的 CLASS
+  叫做混入
+*/
+.box1{
+      .box();
+       background: red;
+}
+.box2
+{
+      .box1();
+}
+/*
+    嵌套
+    这个就是嵌套
+*/
+.wjs_books{
+      width: 100%;
+      a{
+           text-decoration: none;
+           /*
+             生成的位置有一个空格
+             & 可以去掉空格
+         */
+           &:hover{
+                text-decoration: underline;
+           }
+      }
+      >div{
+            width: 200px;
+            .col-lg-1{
+                  height: 200px;
+            }
+      }
+}
+/*
+   导入，在html 里面我们可以导入css文件，可以导入js 文件
+ 我在这里可以导入less 文件，我们做这样的导入，可以很方便
+ 给我们来完成模块化编程
+ 一般在开发的过程当中，我们的变量非常多，我们就把这些变量
+ 放在一个less 文件当中，然后把这个less 文件导入进来就可以。
+我们在bootstrap 里面都是模块化编程，
+我们的bootstrap 有很多的组件，
+nav-tabs form carousel 每个组件都对应有自己的样式，
+ 我就可以新建三个
+*/
+
+/*函数，自定义函数
+ 没有传递参数，默认值就是5px
+ 固定写法
+ @widthdata:5px
+
+ sass less
+*/
+.borderFuc(@widthdata:5px){
+      border-radius: @widthdata;
+      -webkit-border-radius: @widthdata;
+      -moz-border-radius: @widthdata;
+}
+
+
+.box2{
+    /*我需要添加圆角*/
+  .borderFuc(10px);
+}
+
+.box3{
+   /*我需要添加圆角*/
+    .borderFuc(3px);
+}
+
+/*
+   运算  + - x
+*/
+.box4{
+     /* background: #333+#333;*/
+        background: 2*#333;
+        margin: 10%2px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

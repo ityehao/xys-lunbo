@@ -1,0 +1,30 @@
+<!--
+                        active  这个属性是必须，轮播组件从那张图片开始轮播博
+                -->
+                <div class="item active">
+                    <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                        <img src="images/slide_01_640x340.jpg">
+                    </a>
+                    <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_01_2000x410.jpg')"></a>
+
+                </div>
+                <div class="item">
+                    <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                        <img src="images/slide_02_640x340.jpg">
+                    </a>
+                    <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_02_2000x410.jpg')"></a>
+                </div>
+                <div class="item">
+
+                    <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                        <img src="images/slide_03_640x340.jpg">
+                    </a>
+                    <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_03_2000x410.jpg')"></a>
+
+                </div>
+                <div class="item">
+                    <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                        <img src="images/slide_04_640x340.jpg">
+                    </a>
+                    <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_04_2000x410.jpg')"></a>
+                </div>

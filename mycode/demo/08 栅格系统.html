@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+         指定编码的，数据只要在网络上面传递，就会涉及到乱码问题。
+      请求的数据，我给服务器的，一般情况下get 方法，post 方式。
+      如果涉及到数据提交，你就使用post 方式提交的。
+      响应的数据
+          他后台的数据是什么样的编码
+          告诉客户端浏览器以什么样的编码去解析数据
+          Content-Type:text/html;charset=utf-8;
+      -->
+    <meta charset="utf-8">
+    <!--
+        如果客户端的浏览器版本是ie，就以最高的渲染引擎去解析页面。
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口，针对移动设备才会有效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>bootstrap 的基本使用</title>
+    <link href="../lib/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+            .container{
+
+                  height: 700px;
+            }
+            .container .row>div{
+                 height: 40px;
+                 background-color: green;
+                 border: 1px solid #fff;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+            <div class="row">
+                    <!--定义列
+                    列，水平方向摆放
+               在栅格系统看来，每一行默认是放置12列，col-lg-3 每一列占1/4
+              我们的屏幕的分为四种类型的屏幕
+                   超小屏幕 移动设备，小于768  col-xs-6
+                   小屏幕   paid     768-992  col-sm-3
+                   中等屏幕        992-1200  col-md-2 设置的是中等屏幕
+                   超大屏幕       大于1200   col-lg-1 设置的是超大屏幕的对应的列的所占的比例
+                    -->
+                    <div  class="col-lg-1 col-md-2 col-sm-3 col-xs-6">
+
+                    </div>
+                    <div  class="col-lg-3 col-md-2 col-sm-3 col-xs-6"></div>
+                    <div  class="col-lg-3 col-md-2 col-sm-3 col-xs-6"></div>
+                    <div  class="col-lg-3 col-md-2 col-sm-3 col-xs-6"></div>
+                    <div  class="col-lg-2 col-md-2 col-sm-3 col-xs-6"></div>
+            </div>
+    </div>
+
+    <!--这个是一个流式布局容器
+        width：100%；
+    -->
+    <div class="container-fluid"></div>
+
+<script src="../lib/jQuery/jquery.min.js"></script>
+<!--bootstrap 的核心js 压缩文件 ，处理轮播图，js 效果的-->
+<script src="../lib/boostrap/js/bootstrap.js"></script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!--
+              我可以在这个页面里面直接引入index.less 文件
+
+            我们需要导入解析less 的js 文件，less 能被一个js 文件解析成css 文件.
+            浏览器肯定不会认识less 文件，
+            浏览器始终只认识html，css，js
+    -->
+
+
+    <link rel="stylesheet" href="index.less" type="text/less">
+    <!--
+        注意，需要引入到less 文件下面.
+    -->
+    <script src="less.js"></script>
+
+    <title>Title</title>
+</head>
+<body>
+       <div class="box"></div>
+        <div class="box1"></div>
+</body>
+</html>

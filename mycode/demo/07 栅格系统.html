@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+         指定编码的，数据只要在网络上面传递，就会涉及到乱码问题。
+      请求的数据，我给服务器的，一般情况下get 方法，post 方式。
+      如果涉及到数据提交，你就使用post 方式提交的。
+      响应的数据
+          他后台的数据是什么样的编码
+          告诉客户端浏览器以什么样的编码去解析数据
+          Content-Type:text/html;charset=utf-8;
+      -->
+    <meta charset="utf-8">
+    <!--
+        如果客户端的浏览器版本是ie，就以最高的渲染引擎去解析页面。
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口，针对移动设备才会有效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>bootstrap 的基本使用</title>
+    <link href="../lib/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+            .container{
+                 height: 100px;
+                 background-color: red;
+            }
+
+            .container-fluid{
+                 height: 300px;
+                 background-color: green;
+            }
+            .row{
+                 height: 40px;
+                 background-color: pink;
+            }
+    </style>
+</head>
+<body>
+    <!--我们现在要学习栅格系统，在学习栅格系统之前，我们需要学习一个叫做container 容器
+    这个容器是bootstrap 自带的容器,我们以后的栅格系统里面的内容都放在这个container 容器 里面
+    这个是一个响应式容器，如果是响应式容器的话，他就可以去适应各种屏幕
+    我们之前使用的是最大 max-width  ，她现在是min-width
+    假设是超大屏幕，大于1200px ，这个时候container 的宽度1170
+    假设是中等屏幕  992-1200px 这个时候container 的宽度 970px
+    假设是小屏幕设备， 768-992px 这个时候container 的宽度 750px
+    假设是移动设备，小于768px ，这个container 的宽度是适配整个屏幕的宽度
+    这个contanier 版心容器 说有padding 的一个间隔。响应式容器
+
+    栅格系统：这个是用来做响应式布局的，我们之前在页面里面学习布局，一般情况下我们使用div 布局，
+我们还有table 布局。表格布局，表格布局多行，多列。
+    栅格系统，其实也是多行多列。
+    -->
+    <div class="container">
+            <!--
+               定义一行
+            -->
+            <div class="row">
+                <!--这个行里面放置多少列
+                默认有一个样式，把container 的padding 清除掉了
+                margin-left:-15px;
+                -->
+                大发发的
+            </div>
+    </div>
+
+    <!--这个是一个流式布局容器
+        width：100%；
+    -->
+    <div class="container-fluid"></div>
+
+<script src="../lib/jQuery/jquery.min.js"></script>
+<!--bootstrap 的核心js 压缩文件 ，处理轮播图，js 效果的-->
+<script src="../lib/boostrap/js/bootstrap.js"></script>
+</body>
+</html>

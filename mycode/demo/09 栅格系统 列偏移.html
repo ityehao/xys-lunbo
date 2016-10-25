@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+         指定编码的，数据只要在网络上面传递，就会涉及到乱码问题。
+      请求的数据，我给服务器的，一般情况下get 方法，post 方式。
+      如果涉及到数据提交，你就使用post 方式提交的。
+      响应的数据
+          他后台的数据是什么样的编码
+          告诉客户端浏览器以什么样的编码去解析数据
+          Content-Type:text/html;charset=utf-8;
+      -->
+    <meta charset="utf-8">
+    <!--
+        如果客户端的浏览器版本是ie，就以最高的渲染引擎去解析页面。
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口，针对移动设备才会有效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>bootstrap 的基本使用</title>
+    <link href="../lib/boostrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <script src="../lib/respond/respond.js"></script>
+    <style>
+            .container{
+
+                  height: 700px;
+            }
+            .container .row>div{
+                 height: 40px;
+                 background-color: green;
+                 border: 1px solid #fff;
+            }
+    </style>
+</head>
+<body>
+
+    <!--控制列的偏移，向左偏移多少，向右偏移多少。
+        pull 拉
+        push 推
+    -->
+    <div class="container">
+            <div class="row">
+                    <!--
+                         向右推6个间隔
+                    -->
+                    <div class="col-lg-3 col-lg-push-3">1111</div>
+                   <!-- &lt;!&ndash;向左拉三个格子&ndash;&gt;
+                    <div class="col-lg-6 col-lg-pull-3">adsfadsfadsfasdf</div>-->
+            </div>
+    </div>
+    <!--这个是一个流式布局容器
+        width：100%；
+    -->
+    <div class="container-fluid"></div>
+
+<script src="../lib/jQuery/jquery.min.js"></script>
+<!--bootstrap 的核心js 压缩文件 ，处理轮播图，js 效果的-->
+<script src="../lib/boostrap/js/bootstrap.js"></script>
+</body>
+</html>

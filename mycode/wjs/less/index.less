@@ -1,0 +1,24 @@
+
+/*
+
+      先编写less 文件，
+    less 文件会被webstorm 编译成css 文件
+    然后我在html 里面引入css 文件，
+    假设我想扩展css ，我就只需要扩展我的less 文件就可以
+*/
+
+
+@mainColr:#E92322;
+@Number:100px;
+.box{
+     background: @mainColr;
+     width:@Number*2;
+     height:@Number*2;
+}
+
+.box1{
+  background: @mainColr;
+  width:@Number*1;
+  height:@Number*1;
+  margin-top: 100px;
+}

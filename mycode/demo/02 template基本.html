@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+         指定编码的，数据只要在网络上面传递，就会涉及到乱码问题。
+      请求的数据，我给服务器的，一般情况下get 方法，post 方式。
+      如果涉及到数据提交，你就使用post 方式提交的。
+      响应的数据
+          他后台的数据是什么样的编码
+          告诉客户端浏览器以什么样的编码去解析数据
+          Content-Type:text/html;charset=utf-8;
+      -->
+    <meta charset="utf-8">
+    <!--
+        如果客户端的浏览器版本是ie，就以最高的渲染引擎去解析页面。
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口，针对移动设备才会有效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>bootstrap 的基本使用</title>
+
+    <!--
+            这个是bootstrap 的核心的css 文件，这个里面有一些自带的样式
+    -->
+    <link href="../lib/boostrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--
+            html5的语义标签在ie8以下不能被解析，导入这个js 文件，就是处理语义标签的兼容性
+    -->
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <!--respond 响应的意思
+            处理的是ie8 以下的响应式media query
+            这个文件不支持本地打开。
+    -->
+    <script src="../lib/respond/respond.js"></script>
+</head>
+<body>
+
+<!--
+      这个是jQuery 的文件，bootstrap 依赖jQuery
+-->
+<script src="../lib/jQuery/jquery.min.js"></script>
+<!--bootstrap 的核心js 压缩文件 ，处理轮播图，js 效果的-->
+<script src="../lib/boostrap/js/bootstrap.js"></script>
+</body>
+</html>

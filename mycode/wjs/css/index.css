@@ -1,0 +1,571 @@
+/*������ʽ*/
+body{
+    font-family: "Microsoft YaHei", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+a{
+     color: #666;
+ }
+a:hover{
+    color: #666;
+    text-decoration: none;
+}
+.m_l10{
+    margin-left: 10px;
+}
+
+/*ʹ��΢�����Լ��������,���������*/
+@font-face {
+     font-family: itcast;
+    /*���벻ͬ��ʽ������*/
+     src: url('../fonts/MiFie-Web-Font.eot') format('embedded-opentype'),
+     url('../fonts/MiFie-Web-Font.svg') format('svg'),
+     url('../fonts/MiFie-Web-Font.ttf') format('truetype'),
+     url('../fonts/MiFie-Web-Font.woff') format('woff');
+}
+
+
+.wjs_icon{
+     font-family: itcast;
+}
+.wjs_icon_phone::before{
+    content: "\e908";
+}
+.wjs_icon_tel::before{
+    content: "\e909";
+}
+.wjs_icon_logo::before{
+    content: "\e920";
+}
+.wjs_icon_word::before{
+    content: "\e93e";
+}
+.wjs_icon_E903::before{
+    content: "\e903";
+}
+.wjs_icon_E906::before{
+    content: "\e906";
+}
+.wjs_icon_E905::before{
+    content: "\e905";
+}
+.wjs_icon_E907::before{
+    content: "\e907";
+}
+.wjs_icon_E901::before{
+    content: "\e901";
+}
+.wjs_icon_E900::before{
+    content: "\e900";
+}
+.wjs_icon_E904::before{
+    content: "\e904";
+}
+.wjs_icon_E902::before{
+    content: "\e902";
+}
+.wjs_icon_E906::before{
+    content: "\e906";
+}
+.wjs_icon_new01::before{
+    content: "\e90e";
+}
+.wjs_icon_new02::before{
+    content: "\e90f";
+}
+.wjs_icon_new03::before{
+    content: "\e910";
+}
+.wjs_icon_new04::before{
+    content: "\e911";
+}
+.wjs_icon_partner01::before{
+    content:"\e946";
+}
+.wjs_icon_partner02::before{
+    content: "\e92f";
+}
+.wjs_icon_partner03::before{
+    content: "\e92e";
+}
+.wjs_icon_partner04::before{
+    content: "\e92a";
+}
+.wjs_icon_partner05::before{
+    content: "\e929";
+}
+.wjs_icon_partner06::before{
+    content: "\e931";
+}
+.wjs_icon_partner07::before{
+    content: "\e92c";
+}
+.wjs_icon_partner08::before{
+    content: "\e92b";
+}
+.wjs_icon_partner09::before {
+    content: "\e92d";
+}
+/*ҳ���������еİ��� */
+/*ģ���Ӧ����ʽ*/
+/*����������*/
+.wjs_topbar{
+    border: 1px solid #ccc;
+}
+.wjs_topbar .container  .row>div{
+     height: 40px;
+     border-right: 1px solid #ccc;
+     line-height: 40px;
+     text-align: center;
+}
+.wjs_topbar .container  .row>div:first-child a{
+    position: relative;
+    display: block;
+}
+.wjs_topbar .container  .row>div:first-child a:hover img{
+     display: block;
+}
+.wjs_topbar .container  .row>div:first-child img{
+      border: 1px solid #ccc;
+      display: none;
+      position: absolute;
+      left: 50%;
+      top: 40px;
+      margin-left:-60px ;
+      z-index: 1001;
+}
+.wjs_topbar .container  .row>div:last-child{
+     border-right: none;
+}
+
+.wjs_topbar  .btn-register{
+     padding: 3px 15px;
+}
+.wjs_topbar .btn-login{
+     color: #666;
+}
+.wjs_topbar .btn-login:hover{
+     text-decoration: none;
+}
+
+/*导航栏*/
+.wjs_nav{
+      background: #fff;
+}
+
+.wjs_nav .wjs_icon_logo{
+      font-size: 50px;
+      color: #E92322;
+      vertical-align: middle;
+}
+.wjs_nav .wjs_icon_word{
+      font-size:30px ;
+      color: #666;
+    vertical-align: middle;
+}
+.wjs_nav .navbar-brand{
+     height: 80px;
+     line-height: 50px;
+}
+
+.wjs_nav .navbar-nav>li>a{
+     height: 80px;
+     line-height: 50px;
+     padding: 15px 20px;
+}
+.wjs_nav .navbar-header button{
+     margin-top: 25px;
+}
+/*获取到所有的i*/
+.wjs_nav .navbar-nav>li.active a{
+     border-bottom: 3px solid #E92322;
+}
+
+.wjs_nav .navbar-nav>li a:hover{
+    border-bottom: 3px solid #E92322;
+}
+
+.wjs_nav{
+     margin-bottom: 0;
+}
+
+.wjs_info{
+     padding: 50px 0;
+     border-bottom: 1px solid #ccc;
+}
+
+.wjs_info .row>div{
+     padding: 15px;
+}
+
+.wjs_info .container{
+     width: 910px;
+}
+
+/*信息区域*/
+.wjs_info .wjs_icon{
+     font-size: 30px;
+}
+
+.wjs_info .media a:hover{
+     color: #E92322;
+}
+
+/*wjs_book*/
+
+.wjs_books{
+     padding: 30px;
+     font-size: 14px;
+     border-bottom: 1px solid #ccc;
+}
+.wjs_books .container{
+     width: 910px;
+}
+
+.wjs_books .wjs_icon{
+     font-size: 24px;
+}
+
+.wjs_books .book_link{
+     color: #E92322;
+     border-bottom: 1px dashed #E92322;
+}
+
+@media screen and (max-width: 768px){
+        .wjs_books .container{
+              width: 100%;
+
+        }
+        .wjs_books .container .pull-right{
+              display: none;
+        }
+}
+
+/*
+     产品区域
+*/
+.wjs_product{
+     padding: 30px 0;
+     background: #f5f5f5;
+     border-bottom: 1px solid #ccc;
+}
+/*
+  我的一个页面很有可能有多个选项卡
+  如果我现在要改样式，我不能直接在bootstrap.css 里面进行修改.
+  我需要写样式对这个内容进行覆盖 . 我去找到bootstrap.css 对应的css 然后复制到这个位置，进行修改.
+*/
+
+.nav-tabs-product {
+    border-bottom: 1px solid #ddd;
+}
+.nav-tabs-product > li {
+    float: left;
+}
+.nav-tabs-product > li > a {
+    margin-right: 2px;
+    line-height: 1.42857143;
+}
+.nav-tabs-product > li > a:hover {
+    border-bottom: 3px solid #E92322;
+}
+.nav-tabs-product > li.active > a,
+.nav-tabs-product > li.active > a:hover,
+.nav-tabs-product > li.active > a:focus {
+    color: #555;
+    cursor: default;
+    border-bottom: 3px solid #E92322;
+}
+.nav-tabs-product.nav-justified {
+    width: 100%;
+    border-bottom: 0;
+}
+.nav-tabs-product.nav-justified > li {
+    float: none;
+}
+.nav-tabs-product.nav-justified > li > a {
+    margin-bottom: 5px;
+    text-align: center;
+}
+.nav-tabs-product.nav-justified > .dropdown .dropdown-menu {
+    top: auto;
+    left: auto;
+}
+@media (min-width: 768px) {
+    .nav-tabs-product.nav-justified > li {
+        display: table-cell;
+        width: 1%;
+    }
+    .nav-tabs-product.nav-justified > li > a {
+        margin-bottom: 0;
+    }
+}
+.nav-tabs-product.nav-justified > li > a {
+    margin-right: 0;
+}
+.nav-tabs-product.nav-justified > .active > a,
+.nav-tabs-product.nav-justified > .active > a:hover,
+.nav-tabs-product.nav-justified > .active > a:focus {
+    border: 1px solid #ddd;
+}
+@media (min-width: 768px) {
+    .nav-tabs-product.nav-justified > li > a {
+        border-bottom: 1px solid #ddd;
+        border-radius: 4px 4px 0 0;
+    }
+    .nav-tabs-product.nav-justified > .active > a,
+    .nav-tabs-product.nav-justified > .active > a:hover,
+    .nav-tabs-product.nav-justified > .active > a:focus {
+        border-bottom-color: #fff;
+    }
+}
+
+/*产品盒子里面的内容的定义*/
+.product_box{
+      height: 180px;
+      width: 100%;
+      display: block;
+      background: #fff;
+      color: #666;
+      margin-top: 25px;
+      position: relative;
+      box-shadow: 2px 2px 3px #ccc;
+}
+/*选中的盒子的样式*/
+.product_box.active{
+    background: #E92322;
+    color: #fff;
+}
+
+.product_box.active::before{
+      position: absolute;
+      left: 0;
+      top: -7px;
+      display: block;
+      content: '\e915';
+      font-family:itcast;
+      font-size: 30px;
+}
+
+
+.product_box.active:hover{
+      color: #fff;
+}
+.product_box .product_left{
+      overflow: hidden;
+      border-right: 1px dashed #ccc;
+      height: 100%;
+}
+.product_box .product_left h3{
+      font-size: 16px;
+      text-align: center;
+
+}
+.product_box .product_right{
+        float: right;
+        width: 108px;
+        height: 150px;
+        text-align: center;
+        margin-top: 25px;
+        position: relative;
+}
+.product_box .product_right .topbar{
+        position: absolute;
+        left: 0;
+        top: -10px;
+        width: 100%;
+        height: 20px;
+}
+.product_box .product_right .topbar span{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+}
+.product_box .product_right .topbar .bao{
+     border: 1px solid green;
+     color: green;
+}
+.product_box .product_right .topbar .bei{
+    border: 1px solid #E92322;
+    color: #E92322;
+}
+
+.product_box .product_right::before,.product_box .product_right::after{
+    position: absolute;
+    content: '';
+    height: 12px;
+    width: 12px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    left: -6px;
+}
+.product_box .product_right::before{
+        top: -31px;
+}
+.product_box .product_right::after{
+     bottom: -10px;
+}
+
+.product_box .product_right p b{
+     font-size: 40px;
+     /*color: #fff;*/
+     color: #E92322;
+}
+.product_box .product_right p sub
+{
+       color: #E92322;
+}
+.product_box.active .product_right p b{
+    color: #fff;
+}
+.wjs_product .tab-content .col-lg-4:nth-last-child(-n+3) .product_right p:nth-child(1){
+      color: #E92322;
+}
+
+/*
+      肯定要判断设备是否是移动设备.如果是移动设备.nav-tabs-product-parent 给这个属性添加over-hidden
+
+*/
+
+@media screen and (max-width: 768px) {
+    .nav-tabs-product-parent{
+         overflow: hidden;
+    }
+    .nav-tabs-product{
+          width: 768px;
+    }
+}
+
+
+/*新闻模块*/
+
+
+.wjs_news{
+     padding: 20px 0;
+}
+
+
+.news_title{
+     font-size: 25px;
+     margin-top: 30px;
+     text-align: center;
+     border-bottom: 1px solid #ccc;
+     padding-bottom: 10px;
+
+}
+
+.news_title::after{
+     content: '';
+     position: absolute;
+     right: 10px;
+     bottom: -2px;
+     border-radius: 50%;
+     height: 6px;
+     width: 6px;
+     background: #fff;
+     border: 1px solid #ccc;
+}
+
+/*
+   新闻tabs 选项卡的切换.
+*/
+.nav-tabs-news {
+}
+.nav-tabs-news > li {
+}
+
+/**/
+.nav-tabs-news > li > a {
+     width: 60px;
+     height: 60px;
+     display: block;
+     font-size: 30px;
+     border-radius: 50%;
+     background: #ccc;
+     color: #fff;
+     margin-bottom: 30px;
+}
+.nav-tabs-news > li > a:hover {
+    background: #E92322;
+}
+.nav-tabs-news > li.active > a,
+.nav-tabs-news > li.active > a:hover,
+.nav-tabs-news > li.active > a:focus {
+    background: #E92322;
+
+}
+
+/*一条 虚线*/
+.nav-tabs-news li:last-child a{
+     margin-bottom: 0px;
+}
+.news_line{
+     position: absolute;
+     width: 1px;
+     height: 100%;
+     border-left: 1px dashed #ccc;
+     left: 45px;
+     top: 0;
+}
+
+.wjs_news .tab-pane ul{
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+.wjs_news .tab-pane ul li{
+     padding: 10px 0;
+}
+
+
+/*
+        我使用媒体查询来对选项卡进行处理
+*/
+
+/*针对小屏幕进行处理*/
+@media screen and (max-width: 992px) {
+        .nav-tabs-news li{
+                width: 25%;
+                float: left;
+                margin-top:10px;
+        }
+}
+
+
+.wjs_partner{
+     background: #f5f5f5;
+     padding: 30px 0;
+
+}
+
+.wjs_partner ul{
+     list-style: none;
+     text-align: center;
+}
+
+.wjs_partner ul li{
+
+     margin-left: 30px;
+     display: inline-block;
+}
+
+.wjs_partner ul li a{
+     font-size: 60px;
+}
+.wjs_partner ul li a:hover{
+     color: #E92322;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            /*通过css 去获取屏幕的宽度*/
+            .container{
+                    height: 500px;
+                    background-color: green;
+            }
+            /*获取屏幕的宽度，指定区间的布局
+            1：大于1200px 我们叫做超大屏设备
+            2: 992---1200px 之间的，中等屏幕设备  1024
+            3: 768---992 之间  我们小屏幕设备 主要是paid
+            4：小于768px 的设备我们都叫做 移动设备。
+            */
+            /*最大的宽度是768px ，这个区间的样式*/
+
+            /*
+                    中等屏幕设备
+                    所谓的响应式布局，通过获取屏幕宽度去设置指定区间的布局，同样的样式，我要写四份。
+            */
+            @media screen and (max-width: 1200px){
+                .container{
+                    height: 300px;
+                    background-color: #c9302c;
+                }
+            }
+            /*针对的是小屏幕设备*/
+            @media screen and (max-width: 992px){
+                .container{
+                    height: 100px;
+                    background-color: yellowgreen;
+                }
+            }
+            /*针对的是移动设备*/
+            @media screen and (max-width: 768px){
+                .container{
+                    height: 200px;
+                    background-color: pink;
+                }
+            }
+    </style>
+</head>
+<body>
+    <!--
+           container 容器
+    -->
+    <div class="container"></div>
+</body>
+</html>

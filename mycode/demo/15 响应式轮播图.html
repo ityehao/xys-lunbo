@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <!--
+         指定编码的，数据只要在网络上面传递，就会涉及到乱码问题。
+      请求的数据，我给服务器的，一般情况下get 方法，post 方式。
+      如果涉及到数据提交，你就使用post 方式提交的。
+      响应的数据
+          他后台的数据是什么样的编码
+          告诉客户端浏览器以什么样的编码去解析数据
+          Content-Type:text/html;charset=utf-8;
+      -->
+    <meta charset="utf-8">
+    <!--
+        如果客户端的浏览器版本是ie，就以最高的渲染引擎去解析页面。
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--视口，针对移动设备才会有效果-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <title>bootstrap 的基本使用</title>
+
+    <!--
+            这个是bootstrap 的核心的css 文件，这个里面有一些自带的样式
+    -->
+    <link href="../lib/boostrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!--
+            html5的语义标签在ie8以下不能被解析，导入这个js 文件，就是处理语义标签的兼容性
+    -->
+    <script src="../lib/html5shiv/html5shiv.min.js"></script>
+    <!--respond 响应的意思
+            处理的是ie8 以下的响应式media query
+            这个文件不支持本地打开。
+    -->
+    <script src="../lib/respond/respond.js"></script>
+
+    <style>
+            .mb_imageBox{
+                 display: block;
+                 width: 100%;
+            }
+            .mb_imageBox>img{
+                 display: block;
+                 width: 100%;
+            }
+
+
+            /*pc 的样式*/
+            .pc_image_box{
+                width: 100%;
+                height: 410px;
+                display: block;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+    </style>
+
+    <!--
+            问题，我在这个页面里面导入了pc 版本的图片，导入了移动端版本的图片。
+        页面打开会加载两份对应的图片，我希望在移动端就加载移动端图片，希望在pc 端就加载pc 端的图片。
+            怎么去解决问题：
+                 我们这些数据可以从后台获取。
+                 我可以去获取屏幕的宽度，我通过js 可以获取，获取到屏幕的宽度之后，
+             我就可以判断当前对应的 是什么样设备。
+                 我在发送请求给服务器，从服务器上面去获取图片对应的内容，我获取到肯定 是一个路径
+            我获取到数据之后，我需要把这些数据组装成标签，然后通过dom 写到页面上面来。
+                 ajax，组拼字符串，模板template，使用jquery 当中提供更多ajax
+             还是使用我们原声的xmlHttpRequest
+    -->
+
+</head>
+<body>
+<!--
+        用着样的框架的时候，实际上是一个组件，以后我们要操作组件
+        carousel-example-generic
+
+        carousel 旋转，轮播
+        slide 滑动
+
+-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+    <!-- Indicators
+         对应的原点
+     -->
+    <ol class="carousel-indicators">
+        <!--
+
+        -->
+        <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+        <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+    </ol>
+    <!--轮播项-->
+    <div class="carousel-inner" role="listbox">
+        <!--
+                active  这个属性是必须，轮播组件从那张图片开始轮播博
+        -->
+        <div class="item active">
+                <!--针对移动设备
+                     hidden  在对应的设备上面对应内容
+                -->
+                <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                        <img src="images/slide_01_640x340.jpg">
+                </a>
+                <!--针对的是pc 设备-->
+                <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_01_2000x410.jpg')"></a>
+
+        </div>
+        <div class="item">
+            <!--针对移动设备
+                     hidden  在对应的设备上面对应内容
+                -->
+            <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                <img src="images/slide_02_640x340.jpg">
+            </a>
+            <!--针对的是pc 设备-->
+            <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_02_2000x410.jpg')"></a>
+        </div>
+        <div class="item">
+            <!--针对移动设备
+                    hidden  在对应的设备上面对应内容
+               -->
+            <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                <img src="images/slide_03_640x340.jpg">
+            </a>
+            <!--针对的是pc 设备-->
+            <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_03_2000x410.jpg')"></a>
+
+        </div>
+        <div class="item">
+            <!--针对移动设备
+                    hidden  在对应的设备上面对应内容
+               -->
+            <a href="#" class="mb_imageBox hidden-lg hidden-md hidden-sm">
+                <img src="images/slide_04_640x340.jpg">
+            </a>
+            <!--针对的是pc 设备-->
+            <a href="#" class="pc_image_box hidden-xs" style="background-image: url('images/slide_04_2000x410.jpg')"></a>
+
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+<script src="../lib/jQuery/jquery.min.js"></script>
+<!--bootstrap 的核心js 压缩文件 ，处理轮播图，js 效果的-->
+<script src="../lib/boostrap/js/bootstrap.js"></script>
+</body>
+</html>
